@@ -18,7 +18,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
         function formToData() {
 
             var url = "<?php echo site_url('FormController')?>";
-            window.location.href = url;
+           window.location.href = url;
 
         }
 
