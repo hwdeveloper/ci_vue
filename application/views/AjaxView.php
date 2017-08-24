@@ -19,7 +19,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <input v-model="name" placeholder="编辑我……">
     <p>名字是: {{ name }}</p>
 
-    <button v-on:click="askData">提交数据</button>
+    <button onclick="askData()">提交数据1</button><br/>
+    <button v-on:click="askData2">提交数据2</button>
 </div>
 
 
@@ -30,7 +31,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
             name: 'seraph',
         },
         methods: {
-            askData: function (event) {
+            askData2: function (event) {
                 var name = vm.name;
                 var url = "<?php echo site_url('AjaxController/askData')?>";
 
@@ -49,6 +50,24 @@ defined('BASEPATH') or exit('No direct script access allowed');
             }
         }
     })
+
+    function askData(){
+        var name = vm.name;
+        var url = "<?php echo site_url('AjaxController/askData')?>";
+
+        $.ajax({
+            data: {name: name},       //要发送的数据
+            type: "POST",           //发送的方式
+            url: url, //url地址
+            error: function (msg) { //处理出错的信息
+
+            },
+            success: function (msg) {  //处理正确时的信息
+                vm.name=msg;
+
+            }
+        });
+    }
 
 
 
