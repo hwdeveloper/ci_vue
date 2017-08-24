@@ -1,15 +1,15 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
 
-class Tutorial extends CI_Controller {
+class AjaxController extends CI_Controller {
     
-    function Tutorial(){
+    function AjaxController(){
         parent::__construct();
         $this->load->helper('url');
     }
 
 	public function index()
 	{
-		$this->load->view('tutorial');
+		$this->load->view('AjaxView');
 	}
 }

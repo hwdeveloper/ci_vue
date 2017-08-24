@@ -12,12 +12,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
     <script type="text/javascript">
 
         function optionAjax() {
-            var url = "<?php echo site_url('Ajax')?>";
+            var url = "<?php echo site_url('AjaxController')?>";
             window.location.href = url;
         }
         function formToData() {
 
-            var url = "<?php echo site_url('Form1Controller')?>";
+            var url = "<?php echo site_url('FormController')?>";
             window.location.href = url;
 
         }
@@ -30,8 +30,8 @@ defined('BASEPATH') or exit('No direct script access allowed');
 <h1>后台服务器CI，前端Vue.js和jquery</h1>
 <div id="container">
     <div id="body">
-        <code onclick="turnTo()">表单数据提交</code>
-        <code onclick="optionAjax()">AJAX</code>
+        <code onclick="formToData()">表单数据提交</code>
+        <code onclick="optionAjax()">AJAX数据提交</code>
     </div>
 </div>
 
