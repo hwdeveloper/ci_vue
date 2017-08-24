@@ -42,7 +42,7 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
                     },
                     success: function (msg) {  //处理正确时的信息
-                        alert(msg)
+                        vm.name=msg;
 
                     }
                 });
