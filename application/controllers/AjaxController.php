@@ -12,4 +12,9 @@ class AjaxController extends CI_Controller {
 	{
 		$this->load->view('AjaxView');
 	}
+
+    function askData(){
+        $params=$_POST['name'];
+        echo "超级".$params;
+    }
 }
